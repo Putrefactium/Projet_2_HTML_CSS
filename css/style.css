@@ -21,25 +21,31 @@ body {
 
 .header-container {
     display: flex;
+    flex-direction: column;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.site-container {
+    display: flex;
     justify-content: space-between; 
     align-items: flex-start;
     width: 100%;
     max-width: 1440px;  
-    margin: 0 auto;     
-    padding: 20px; 
+    margin: 10px auto;     
 }
 
-.logo {
+.site-container .logo {
     align-self: flex-end;
 }
 
-.logo img {
+.site-container .logo img {
     width: 78px;
     height: auto;
     padding: 5px 50px
 }
 
-.nav-links {
+.site-container .nav-links {
     display: flex;
     padding: 0 50px;
     gap: 68px;
@@ -47,31 +53,62 @@ body {
     align-self: flex-start;
 }
 
-.nav-links a {
+.site-container .nav-links a {
     color: black;
     font-size: 16px;
     font-weight: 700;
     position: relative;
 }
 
-.nav-links a::before {
+.site-container .nav-links a::before {
     content: "";
     display: block;
     position: absolute;
-    top: -22px;
+    top: -15px;
     left: 0;
     right: 0;
     height: 3px;
     background-color: transparent;
 }
 
-.nav-links a:hover {
+.site-container .nav-links a:hover {
     color: #0065FC;
     text-decoration: none;
 }
 
-.nav-links a:hover::before {
+.site-container .nav-links a:hover::before {
     background-color: #0065FC;
+}
+
+.search-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 1440px;
+    align-items:start;
+    padding: 50px 50px 20px;
+}
+
+.search-container .search-title-section p {
+    margin-top: 8px;
+}
+
+.search-container > div {
+    margin-bottom: 10px;
+}
+
+
+.search-info {
+    display: flex;
+    align-items: center;
+    justify-content:flex-start;
+}
+
+.search-info img {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+    margin-top: 6px;
 }
 
 .main-container {
@@ -90,6 +127,12 @@ a {
 .section-title {
     margin: 0;
     font-size: 22px;
+}
+
+.section-subtitle {
+    margin: 5px 0 0 0;
+    font-size: 16px;
+    font-weight: 400;
 }
 
 .card {
