@@ -387,26 +387,55 @@ input[type="text"] {
 }
 
 .activites .card {
-    flex: 1; 
-    min-width: 300px;
-    height: 439px; 
+    /* Utilisation de clamp pour une taille de carte dynamique */
+    width: clamp(193.5px, 20vw, 297.5px); /* minimum 193.5px, jusqu'à 297.5px maximum */
+    height: clamp(270px, 29vw, 439px);    /* minimum 270px, jusqu'à 439px maximum */
+    background-color: white;
+    border-radius: 20px;
     box-sizing: border-box;
-    padding: 0;
     display: flex;
     flex-direction: column;
 }
 
 .activites img {
-    width: 100%;
-    height: 87%; /* Maintain aspect ratio */
+    width: 100%; /* L'image prend la largeur entière de la carte */
+    height: 80%; /* L'image s'ajuste à la hauteur du conteneur */
+    object-fit: cover; /* Remplir la zone de manière uniforme */
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
-    flex-grow: 1; /* Ensure the image takes up available space */
+    flex-grow: 1; /* S'assure que l'image prend tout l'espace disponible dans le conteneur */
 }
 
 .activites .card-content {
     padding-left: 15px;
-    margin-top: -5px;
+}
+
+/****** Footer ***********/
+
+.footer {
+    width: 100%;
+    max-width: 1440px;
+    background-color: var(--main-bg-color);
+    margin-top: 50px;
+}
+
+.footer .footer-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px;
+    padding-top: 10px;
+    gap: 15px;
+    margin-right: 300px;
+}
+
+.footer-title {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.footer .section-subtitle {
+    margin-top: 10px;
 }
 
 /* Le code ci-dessous correspond à la version responsive uniquement */
