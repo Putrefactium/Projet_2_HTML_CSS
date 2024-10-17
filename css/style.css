@@ -269,29 +269,33 @@ input[type="text"] {
     flex-direction: column;
     width: 65%;
     max-width: 1440px;
-    align-items:start;
     padding: 50px 50px 20px;
+    box-sizing: border-box;
 }
 
 .hebergements-title {
     margin-bottom: 30px;
 }
 
-.hebergements-cards {
+.hebergements-cards-container {
     display: flex;
-    flex-direction: wrap;
+    flex-wrap: wrap;
     margin-bottom: 30px;
+    gap: 10px;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .hebergements .card {
-    display: flex;
-    flex-direction: column;
-    width: 243px;
+    width: 243px; /* Fixed width */
+    height: 207px; /* Fixed height */ 
+    margin: 8px; 
+    box-sizing: border-box;
 }
 
 .hebergements img {
     width: 100%;
-    height: 136px;
+    height: 60%;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
 }
@@ -303,8 +307,8 @@ input[type="text"] {
 }
 
 .hebergements .card-title, .card-subtitle {
-    margin-top: 8px;
-    margin-bottom: 8px;
+    margin-top: 5px;
+    margin-bottom: 7px;
 }
 
 .hebergements .card-rating {
