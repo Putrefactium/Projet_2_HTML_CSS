@@ -381,24 +381,27 @@ input[type="text"] {
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 10px;
+    gap: 20px;
     width: 100%;
     box-sizing: border-box;
 }
 
 .activites .card {
-    width: 290px; /* Fixed width */
-    height: 439px; /* Fixed height */ 
-    margin: 8px; 
-    padding: 0;
+    flex: 1; 
+    min-width: 300px;
+    height: 439px; 
     box-sizing: border-box;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
 }
 
 .activites img {
     width: 100%;
-    height: 87%; /* height offset to replicate Figma */
+    height: 87%; /* Maintain aspect ratio */
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
+    flex-grow: 1; /* Ensure the image takes up available space */
 }
 
 .activites .card-content {
