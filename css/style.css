@@ -387,27 +387,38 @@ input[type="text"] {
 }
 
 .activites .card {
-    /* Utilisation de clamp pour une taille de carte dynamique */
-    width: clamp(193.5px, 20vw, 297.5px); /* minimum 193.5px, jusqu'à 297.5px maximum */
-    height: clamp(270px, 29vw, 439px);    /* minimum 270px, jusqu'à 439px maximum */
+    flex: 1;
+    width: clamp(193.5px, 20vw, 297.5px); 
+    height: clamp(270px, 30vw, 439px);    
     background-color: white;
     border-radius: 20px;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
+    padding: 0px;
+    overflow: hidden;
+}
+
+.activites .card-title {
+    margin-top: 0px;
+    padding-bottom: 10px;
+    margin-bottom: 0px;
 }
 
 .activites img {
-    width: 100%; /* L'image prend la largeur entière de la carte */
-    height: 80%; /* L'image s'ajuste à la hauteur du conteneur */
-    object-fit: cover; /* Remplir la zone de manière uniforme */
+    width: 100%; 
+    height: clamp(200px, 25vw, 380px); 
+    object-fit: cover; 
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
-    flex-grow: 1; /* S'assure que l'image prend tout l'espace disponible dans le conteneur */
 }
 
 .activites .card-content {
-    padding-left: 15px;
+    padding: 0px 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Aligne le texte en bas si nécessaire */
+    min-height: 60px; /* Garde une hauteur minimale pour le texte */
 }
 
 /****** Footer ***********/
