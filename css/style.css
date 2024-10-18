@@ -287,8 +287,8 @@ input[type="text"] {
 }
 
 .hebergements .card {
-    width: 243px; /* Fixed width */
-    height: 207px; /* Fixed height */ 
+    width: 243px; 
+    height: 207px; 
     margin: 8px; 
     box-sizing: border-box;
 }
@@ -417,8 +417,8 @@ input[type="text"] {
     padding: 0px 15px;
     display: flex;
     flex-direction: column;
-    justify-content: center; /* Aligne le texte en bas si nécessaire */
-    min-height: 60px; /* Garde une hauteur minimale pour le texte */
+    justify-content: center; 
+    min-height: 60px; 
 }
 
 /****** Footer ***********/
@@ -436,8 +436,13 @@ input[type="text"] {
     justify-content: space-between;
     padding: 20px;
     padding-top: 10px;
-    gap: 15px;
-    margin-right: 300px;
+    width: 100%;
+}
+
+.footer-subsection {
+    width: 33.33%;
+    display: flex;
+    flex-direction: column;
 }
 
 .footer-title {
