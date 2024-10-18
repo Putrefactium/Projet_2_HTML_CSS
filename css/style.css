@@ -89,12 +89,27 @@ a {
     background-color: transparent;
 }
 
+.site-container .nav-links a::after {
+    content: "";
+    display: none;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background-color: transparent;
+}
+
 .site-container .nav-links a:hover {
     color: #0065FC;
     text-decoration: none;
 }
 
 .site-container .nav-links a:hover::before {
+    background-color: #0065FC;
+}
+
+.site-container .nav-links a:hover::after {
     background-color: #0065FC;
 }
 
@@ -368,7 +383,7 @@ input[type="text"] {
     flex-direction: column;
     width: 100%;
     max-width: 1440px;
-    padding: 50px 50px 20px;
+    padding: 50px 0px 20px 20px;
     box-sizing: border-box;
     margin-top: 30px;
 }
@@ -457,6 +472,46 @@ input[type="text"] {
 /* Le code ci-dessous correspond à la version responsive uniquement */
 
 /****** Media queries ***********/
+/* Better responsive hebergements et populaires */
+
+@media (max-width: 1452px) {
+    .hebergements-and-populaires {
+        flex-direction: column;
+    }
+
+    .hebergements {
+        width: 100%;
+    }
+
+    .hebergements-cards-container {
+        display: flex;
+        justify-content:space-around;
+    }
+
+    .populaires {
+        width: 100%;
+        margin-top: 50px;
+    }
+
+    .populaires-cards {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .populaires-cards a {
+        width: 30%;
+    }
+
+    .populaires-cards .card-title {
+        font-size: 14px;
+    }
+
+    .populaires-cards .card-subtitle {
+        font-size: 13px;
+    }
+}
+
 /* Medium devices (tablets, less/equal than 1024px) */
 @media (max-width: 1024px) {
     .hebergements-and-populaires {
@@ -493,6 +548,39 @@ input[type="text"] {
 
 /* Small devices (phones, less than 768px) */
 @media (max-width: 767.98px) {
+    .site-container {
+        width: 100%;
+        flex-direction: column;    
+    }
+
+    .site-container .logo {
+        display: flex;
+        align-self: center;
+    }
+
+    .site-container .nav-links {
+        display: flex;
+        align-self: center;
+        width: 100%;
+        justify-content: center;
+        margin-top: 30px;
+    }
+
+    .site-container .nav-links a {
+        width: 50%; 
+        text-align: center; 
+        position: relative;
+        padding-bottom: 10px; 
+    }
+
+    .site-container .nav-links a::before {
+        display: none;
+    }
+
+    .site-container .nav-links a::after {
+        display: block;
+    }
+
     .search-text {
         display: none;
       }
