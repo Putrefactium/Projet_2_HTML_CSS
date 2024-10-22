@@ -780,6 +780,16 @@ input[type="text"] {
     .populaires-cards a {
         width: 100%;
     }
+
+    .activites {
+        padding: 35px 0 0 0;
+    }
+
+    .activites-cards-container {
+        flex-direction: column;
+        align-items:normal
+    }
+
 }
 
 /* Specific Trigger points for better responsive in Tablette / Mobile Transition */
