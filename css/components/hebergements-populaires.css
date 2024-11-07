@@ -6,6 +6,7 @@
 
 .populaires .card {
     height: 144px;
+    box-sizing: border-box;
 }
 
 /* Étoiles */

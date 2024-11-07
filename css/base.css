@@ -13,3 +13,12 @@ body {
     justify-content: center;
     margin: 0;
 }
+
+/* Layout */
+.container {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 50px;
+    box-sizing: border-box;
+}
