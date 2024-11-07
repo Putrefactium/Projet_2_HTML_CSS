@@ -12,60 +12,63 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
         integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/main.css">
 </head>
 
 <body>
-    <body>
-        <div class="container">
-            <!-- Header -->
-            <header class="w-full mb-30">
-                <div class="flex flex-col gap-30">
-                    <!-- Navigation -->
-                    <div class="flex justify-between items-center w-full header-nav">
-                        <div class="logo self-center py-30">
-                            <img src="images/logo/Booki.png" alt="Logo de Booki" class="w-78">
-                        </div>
-                        <nav class="flex">
-                            <ul class="flex gap-68">
-                                <li class="nav-item">
-                                    <a href="#hebergements">Hébergements</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="#activites">Activités</a>
-                                </li>
-                            </ul>
-                        </nav>
+    <div class="container">
+        <!-- Header -->
+        <header class="w-full mb-30">
+            <div class="flex flex-col gap-30">
+                <!-- Navigation -->
+                <div class="flex justify-between items-center w-full header-nav site-container">
+                    <div class="logo self-center py-30">
+                        <img src="images/logo/Booki.png" alt="Logo de Booki" class="w-78">
                     </div>
-            </header>
-            <!-- Main -->
-            <main class="flex flex-col gap-35 mb-35">
-                <!-- Section Conteneur de recherche -->
-                <div class="flex flex-col gap-35">
-                    <!-- Section Titre et description -->
-                    <div class="flex flex-col gap-8">
-                        <h1 class="text-xl font-bold m-0">Trouvez votre hébergement pour des vacances de rêve</h2>
-                        <p class="text-base m-0">En plein centre-ville ou en pleine nature</p>
+                    <nav class="flex nav-links">
+                        <ul class="flex gap-68">
+                            <li class="nav-item">
+                                <a href="#hebergements" class="font-normal text-base text-primary">Hébergements</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#activites" class="font-normal text-base text-primary">Activités</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
+        <!-- Main -->
+        <main class="flex flex-col gap-35 mb-35">
+            <!-- Section Conteneur de recherche -->
+            <div class="flex flex-col gap-35 search-container">
+                <!-- Section Titre et description -->
+                <div class="flex flex-col gap-8">
+                    <h1 class="text-xl font-bold m-0">Trouvez votre hébergement pour des vacances de rêve</h1>
+                    <p class="text-base m-0">En plein centre-ville ou en pleine nature</p>
+                </div>
+                <!-- Barre de recherche -->
+                <div class="flex h-50 w-377 search-bar">
+                    <div class="flex items-center justify-center w-50  bg-main rounded-l-15 location-icon-container">
+                        <img src="images/logo/location-dot.png" alt="Icone de Point de Localisation" class="w-14 h-18">
                     </div>
-                    <!-- Barre de recherche -->
-                    <div class="flex h-50 w-377">
-                        <div class="flex items-center justify-center w-50  bg-main rounded-l-15 location-icon-container">
-                            <img src="images/logo/location-dot.png" alt="Icone de Point de Localisation" class="w-16 h-16">
-                        </div>
-                        <input type="text" 
-                               placeholder="Où voyagez-vous ? " 
-                               class="flex-grow px-20 text-lg font-bold border-0">
-                        <button class="btn btn-primary rounded-r-15 px-16 py-15">
-                            <span class="search-text font-bold text-lg">Rechercher</span>
-                            <img src="images/logo/magnifing-glass.png" 
-                                 class="search-icon w-16 h-16" 
-                                 alt="Icone de loupe">
-                        </button>
-                    </div>
-                    <!-- Filtres -->
-                    <div class="flex flex-wrap items-center gap-15 h-50">
-                        <h2 class="text-lg font-bold">Filtres</h2>
-                        <div class="flex flex-row gap-15 h-50">
+                    <input type="text" 
+                            placeholder="Où voyagez-vous ? " 
+                            class="flex-grow px-20 text-lg font-bold border-0">
+                    <button class="btn btn-primary rounded-r-15 px-16 py-15">
+                        <span class="search-text font-bold text-lg">Rechercher</span>
+                        <img src="images/logo/magnifing-glass.png" 
+                                class="search-icon w-16 h-16" 
+                                alt="Icone de loupe">
+                    </button>
+                </div>
+                <!-- Filtres -->
+                <div class="flex flex-wrap items-center h-50 filters-container-w-title gap-15 mb-35">
+                    <h2 class="text-lg font-bold">Filtres</h2>
+                    <!-- Filtres Container -->
+                    <div class="flex flex-row gap-15 h-50 filters-container">
+                        <!-- Filtres 1 & 2 -->
+                        <div class="flex flex-row gap-15 h-50 filters-subcontainer">
                             <button class="btn btn-filter flex items-center gap-10 px-19 py-4 rounded-25">
                                 <img src="images/logo/price.png" alt="Icone de Prix" class="w-24 h-24">
                                 <span class="font-bold text-filter">Économique</span>
@@ -74,6 +77,9 @@
                                 <img src="images/logo/family.png" alt="Icone de Famille" class="w-24 h-24">
                                 <span class="font-bold text-filter">Familial</span>
                             </button>
+                        </div>
+                        <!-- Filtres 3 & 4 -->
+                        <div class="flex flex-row gap-15 h-50 filters-subcontainer">
                             <button class="btn btn-filter flex items-center gap-10 px-19 py-4 rounded-25">
                                 <img src="images/logo/romantic.png" alt="Icone Romantique" class="w-24 h-24">
                                 <span class="font-bold text-filter">Romantique</span>
@@ -84,31 +90,32 @@
                             </button>
                         </div>
                     </div>
-                    <!-- Info -->
-                    <div class="flex items-center gap-10">
-                        <img src="images/logo/i.png" alt="Logo d'information" class="info-icon-container">
-                        <p class="text-base m-0">Plus de 500 logements sont disponibles dans cette ville</p>
-                    </div>
                 </div>
-                <!-- Section Hébergements et  Populaires -->
-                <div class="hebergements-and-populaires flex gap-40">
-                    <!-- Section Hébergements -->
-                    <section id="hebergements" class="hebergements w-73p flex-1 bg-main p-30 rounded-20">
-                        <h2 class="section-title text-xl font-bold">Hébergements à Marseille</h2>
-                        <div class="flex flex-col gap-30 py-30 pb-0">
-                            <!-- 1er Conteneur des cartes Hébergements -->
-                            <div class="flex flex-row gap-30 w-full">
+                <!-- Info -->
+                <div class="flex items-center gap-10">
+                    <img src="images/logo/i.png" alt="Logo d'information" class="info-icon-container">
+                    <p class="text-base m-0">Plus de 500 logements sont disponibles dans cette ville</p>
+                </div>
+            </div>
+            <!-- Section Hébergements et  Populaires -->
+            <div class="hebergements-and-populaires flex gap-40">
+                <!-- Section Hébergements -->
+                <section id="hebergements" class="hebergements w-73p flex-1 bg-main p-30 rounded-20">
+                    <h2 class="section-title text-xl font-bold">Hébergements à Marseille</h2>
+                    <div class="flex flex-col gap-30 py-30 pb-0 hebergements-cards-container" id="hebergements-cards-container">
+                        <!-- 1er Conteneur des cartes Hébergements -->
+                        <div class="flex flex-row gap-30 w-full hebergements-cards">
                             <a href="#" class="flex-1">
                                 <article class="flex flex-col card shadow p-5 bg-white rounded-20 pb-15 gap-10">
                                     <div class="img-container h-124">
                                         <img src="./images/hebergements/fred-kleber.jpg" 
-                                             alt="Image de la chambre d'hôtel"
-                                             class="img-full object-cover img-rounded-t">
+                                                alt="Image de la chambre d'hôtel"
+                                                class="img-full object-cover img-rounded-t">
                                     </div>
-                                    <div class="flex flex-col px-15 gap-10">
+                                    <div class="card-txt flex flex-col px-15 gap-10">
                                         <div class="flex flex-col gap-4">
                                             <h3 class="card-title text-base font-bold">Hôtel du port</h3>
-                                            <p class="text-base">Nuit à partir de 52<span class="euro">€</span></p>
+                                            <p class="text-sm">Nuit à partir de 52<span class="euro">€</span></p>
                                         </div>
                                         <div class="flex flex-row">
                                             <i class="fa-xs fa-solid fa-star text-primary" aria-hidden="true"></i>
@@ -125,13 +132,13 @@
                                 <article class="flex flex-col card shadow p-5 bg-white rounded-20 pb-15 gap-10">
                                     <div class="img-container h-124">
                                         <img src="./images/hebergements/febrian-zakaria.jpg" 
-                                             alt="Image de la chambre d'hôtel"
-                                             class="img-full object-cover img-rounded-t">
+                                                alt="Image de la chambre d'hôtel"
+                                                class="img-full object-cover img-rounded-t">
                                     </div>
-                                    <div class="flex flex-col px-15 gap-10">
+                                    <div class="card-txt flex flex-col px-15 gap-10">
                                         <div class="flex flex-col gap-4">
                                             <h3 class="card-title text-base font-bold">Hôtel Chez Amina</h3>
-                                            <p class="text-base">Nuit à partir de 96<span class="euro">€</span></p>
+                                            <p class="text-sm">Nuit à partir de 96<span class="euro">€</span></p>
                                         </div>
                                         <div class="flex flex-row">
                                             <i class="fa-xs fa-solid fa-star text-primary" aria-hidden="true"></i>
@@ -148,13 +155,13 @@
                                 <article class="flex flex-col card shadow p-5 bg-white rounded-20 pb-15 gap-10">
                                     <div class="img-container h-124">
                                         <img src="./images/hebergements/reisetopia.jpg" 
-                                             alt="Image de la chambre d'hôtel"
-                                             class="img-full object-cover img-rounded-t">
+                                                alt="Image de la chambre d'hôtel"
+                                                class="img-full object-cover img-rounded-t">
                                     </div>
-                                    <div class="flex flex-col px-15 gap-10">
+                                    <div class="card-txt flex flex-col px-15 gap-10">
                                         <div class="flex flex-col gap-4">
                                             <h3 class="card-title text-base font-bold">Hôtel Les mouettes</h3>
-                                            <p class="text-base">Nuit à partir de 76<span class="euro">€</span></p>
+                                            <p class="text-sm">Nuit à partir de 76<span class="euro">€</span></p>
                                         </div>
                                         <div class="flex flex-row">
                                             <i class="fa-xs fa-solid fa-star text-primary" aria-hidden="true"></i>
@@ -169,18 +176,18 @@
                             </a>
                         </div>
                         <!-- 2ème Conteneur des cartes Hébergements -->
-                        <div class="flex flex-row gap-30 w-full">
+                        <div class="flex flex-row gap-30 w-full hebergements-cards">
                             <a href="#" class="flex-1">
                                 <article class="flex flex-col card shadow p-5 bg-white rounded-20 pb-15 gap-10">
                                     <div class="img-container h-124">
                                         <img src="./images/hebergements/annie-spratt.jpg" 
-                                             alt="Image de la chambre d'hôtel"
-                                             class="img-full object-cover img-rounded-t">
+                                                alt="Image de la chambre d'hôtel"
+                                                class="img-full object-cover img-rounded-t">
                                     </div>
-                                    <div class="flex flex-col px-15 gap-10">
+                                    <div class="card-txt flex flex-col px-15 gap-10">
                                         <div class="flex flex-col gap-4">
                                             <h3 class="card-title text-base font-bold">Hôtel de la mer</h3>
-                                            <p class="text-base">Nuit à partir de 46<span class="euro">€</span></p>
+                                            <p class="text-sm">Nuit à partir de 46<span class="euro">€</span></p>
                                         </div>
                                         <div class="flex flex-row">
                                             <i class="fa-xs fa-solid fa-star text-primary" aria-hidden="true"></i>
@@ -197,13 +204,13 @@
                                 <article class="flex flex-col card shadow p-5 bg-white rounded-20 pb-15 gap-10">
                                     <div class="img-container h-124">
                                         <img src="./images/hebergements/marcus-loke.jpg" 
-                                             alt="Image de la chambre d'hôtel"
-                                             class="img-full object-cover img-rounded-t">
+                                                alt="Image de la chambre d'hôtel"
+                                                class="img-full object-cover img-rounded-t">
                                     </div>
-                                    <div class="flex flex-col px-15 gap-10">
+                                    <div class="card-txt flex flex-col px-15 gap-10">
                                         <div class="flex flex-col gap-4">
                                             <h3 class="card-title text-base font-bold">Auberge La Canebière</h3>
-                                            <p class="text-base">Nuit à partir de 25<span class="euro">€</span></p>
+                                            <p class="text-sm">Nuit à partir de 25<span class="euro">€</span></p>
                                         </div>
                                         <div class="flex flex-row">
                                             <i class="fa-xs fa-solid fa-star text-primary" aria-hidden="true"></i>
@@ -220,13 +227,13 @@
                                 <article class="flex flex-col card shadow p-5 bg-white rounded-20 pb-15 gap-10">
                                     <div class="img-container h-124">
                                         <img src="./images/hebergements/nicate-lee.jpg" 
-                                             alt="Image de la chambre d'hôtel"
-                                             class="img-full object-cover img-rounded-t">
+                                                alt="Image de la chambre d'hôtel"
+                                                class="img-full object-cover img-rounded-t">
                                     </div>
-                                    <div class="flex flex-col px-15 gap-10">
+                                    <div class="card-txt flex flex-col px-15 gap-10">
                                         <div class="flex flex-col gap-4">
                                             <h3 class="card-title text-base font-bold">Auberge Le Panier</h3>
-                                            <p class="text-base">Nuit à partir de 23<span class="euro">€</span></p>
+                                            <p class="text-sm">Nuit à partir de 23<span class="euro">€</span></p>
                                         </div>
                                         <div class="flex flex-row">
                                             <i class="fa-xs fa-solid fa-star text-primary" aria-hidden="true"></i>
@@ -240,147 +247,148 @@
                                 </article>
                             </a>
                         </div>
-                        <div class="m-0">
-                            <h2 class="text-lg font-bold">Afficher plus</h2>
-                        </div>
-                    </section>
-                    <!-- Section Populaires -->
-                    <section class="populaires w-27p bg-main p-30 rounded-20 populaires-section">
-                        <div class="flex justify-between items-center mb-30">
-                            <h2 class="section-title text-xl font-bold">Les plus populaires</h2>
-                            <i class="fa-solid fa-chart-line text-primary" aria-hidden="true"></i>
-                        </div>
-                        <div class="flex flex-col gap-30 populaires-cards">
-                            <a href="#">
-                                <article class="card shadow p-5 flex h-136 bg-white rounded-20">
-                                    <div class="w-33p h-full">
-                                        <img src="./images/hebergements/emile-guillemot.jpg" 
-                                                alt="Image de la chambre d'hôtel"
-                                                class="img-full object-cover img-rounded-l">
-                                    </div>
-                                    <div class="flex flex-col flex-1 p-15 justify-between">
-                                        <div class="card-txt">
-                                            <h3 class="text-base font-bold mb-7">Hôtel Le soleil du matin</h3>
-                                            <p class="text-base">Nuit à partir de 128<span class="euro">€</span></p>
-                                        </div>
-                                        <div class="flex">
-                                            <i class="fa-xs fa-solid fa-star text-primary" aria-hidden="true"></i>
-                                            <i class="fa-xs fa-solid fa-star text-primary" aria-hidden="true"></i>
-                                            <i class="fa-xs fa-solid fa-star text-primary" aria-hidden="true"></i>
-                                            <i class="fa-xs fa-solid fa-star text-primary" aria-hidden="true"></i>
-                                            <i class="fa-xs fa-solid fa-star neutral-star" aria-hidden="true"></i>
-                                            <span class="sr-only">Note de 4 sur 5</span>
-                                        </div>
-                                    </div>
-                                </article>
-                            </a>
-                            <a href="#">
-                                <article class="card shadow p-5 flex h-136 bg-white rounded-20">
-                                    <div class="w-33p h-full">
-                                        <img src="./images/hebergements/aw-creative.jpg" 
-                                                alt="Image de la chambre d'hôtel"
-                                                class="img-full object-cover img-rounded-l">
-                                    </div>
-                                    <div class="flex flex-col flex-1 p-15 justify-between">
-                                        <div class="card-txt">
-                                            <h3 class="text-base font-bold mb-7">Chambres d'hôtes Au cœur de l'eau</h3>
-                                            <p class="text-base">Nuit à partir de 71<span class="euro">€</span></p>
-                                        </div>
-                                        <div class="flex">
-                                            <i class="fa-xs fa-solid fa-star text-primary" aria-hidden="true"></i>
-                                            <i class="fa-xs fa-solid fa-star text-primary" aria-hidden="true"></i>
-                                            <i class="fa-xs fa-solid fa-star text-primary" aria-hidden="true"></i>
-                                            <i class="fa-xs fa-solid fa-star text-primary" aria-hidden="true"></i>
-                                            <i class="fa-xs fa-solid fa-star neutral-star" aria-hidden="true"></i>
-                                            <span class="sr-only">Note de 4 sur 5</span>
-                                        </div>
-                                    </div>
-                                </article>
-                            </a>
-                            <a href="#">
-                                <article class="card shadow p-5 flex h-136 bg-white rounded-20">
-                                    <div class="w-33p h-full">
-                                        <img src="./images/hebergements/febrian-zakaria2.jpg" 
-                                                alt="Image de la chambre d'hôtel"
-                                                class="img-full object-cover img-rounded-l">
-                                    </div>
-                                    <div class="flex flex-col flex-1 p-15 justify-between">
-                                        <div class="card-txt">
-                                            <h3 class="text-base font-bold mb-7">Hôtel Bleu et Blanc</h3>
-                                            <p class="text-base">Nuit à partir de 68<span class="euro">€</span></p>
-                                        </div>
-                                        <div class="flex">
-                                            <i class="fa-xs fa-solid fa-star text-primary" aria-hidden="true"></i>
-                                            <i class="fa-xs fa-solid fa-star text-primary" aria-hidden="true"></i>
-                                            <i class="fa-xs fa-solid fa-star text-primary" aria-hidden="true"></i>
-                                            <i class="fa-xs fa-solid fa-star text-primary" aria-hidden="true"></i>
-                                            <i class="fa-xs fa-solid fa-star neutral-star" aria-hidden="true"></i>
-                                            <span class="sr-only">Note de 4 sur 5</span>
-                                        </div>
-                                    </div>
-                                </article>
-                            </a>
-                        </div>
-                    </section>
-                </div>
-                <!-- Section Activités -->
-                <section id="activites" class="activites p-30">
-                    <h2 class="section-title text-xl font-bold mb-30">Activités à Marseille</h2>
-                    <div class="flex flex-row gap-30">
-                        <a href="#" class="flex-1">
-                            <article class="card shadow bg-white rounded-20">
-                                <div class="img-container img-h-380">
-                                    <img src="./images/activites/reno-laithienne.jpg" 
-                                        alt="Image du Vieux-Port de Marseille"
-                                        class="img-full object-cover img-rounded-t">
+                    </div>
+                    <div class="m-0">
+                        <h2 class="text-lg font-bold">Afficher plus</h2>
+                    </div>
+                </section>
+                <!-- Section Populaires -->
+                <section class="populaires w-27p bg-main p-30 rounded-20 populaires-section">
+                    <div class="flex justify-between items-center mb-30">
+                        <h2 class="section-title text-xl font-bold">Les plus populaires</h2>
+                        <i class="fa-solid fa-chart-line text-primary" aria-hidden="true"></i>
+                    </div>
+                    <div class="flex flex-col gap-30 populaires-cards">
+                        <a href="#">
+                            <article class="card shadow p-5 flex h-136 bg-white rounded-20">
+                                <div class="w-33p h-full">
+                                    <img src="./images/hebergements/emile-guillemot.jpg" 
+                                            alt="Image de la chambre d'hôtel"
+                                            class="img-full object-cover img-rounded-l">
                                 </div>
-                                <div class="p-20 card-txt">
-                                    <h3 class="text-base font-bold">Vieux-Port</h3>
+                                <div class="flex flex-col flex-1 p-15 justify-between">
+                                    <div class="card-txt">
+                                        <h3 class="text-base font-bold mb-7">Hôtel Le soleil du matin</h3>
+                                        <p class="text-sm">Nuit à partir de 128<span class="euro">€</span></p>
+                                    </div>
+                                    <div class="flex">
+                                        <i class="fa-xs fa-solid fa-star text-primary" aria-hidden="true"></i>
+                                        <i class="fa-xs fa-solid fa-star text-primary" aria-hidden="true"></i>
+                                        <i class="fa-xs fa-solid fa-star text-primary" aria-hidden="true"></i>
+                                        <i class="fa-xs fa-solid fa-star text-primary" aria-hidden="true"></i>
+                                        <i class="fa-xs fa-solid fa-star neutral-star" aria-hidden="true"></i>
+                                        <span class="sr-only">Note de 4 sur 5</span>
+                                    </div>
                                 </div>
                             </article>
                         </a>
-                        <a href="#" class="flex-1">
-                            <article class="card shadow bg-white rounded-20">
-                                <div class="img-container img-h-380">
-                                    <img src="./images/activites/paul-hermann.jpg" 
-                                        alt="Image du Fort de Pomègues"
-                                        class="img-full object-cover img-rounded-t">
+                        <a href="#">
+                            <article class="card shadow p-5 flex h-136 bg-white rounded-20">
+                                <div class="w-33p h-full">
+                                    <img src="./images/hebergements/aw-creative.jpg" 
+                                            alt="Image de la chambre d'hôtel"
+                                            class="img-full object-cover img-rounded-l">
                                 </div>
-                                <div class="p-20 card-txt">
-                                    <h3 class="text-base font-bold">Fort de Pomègues</h3>
+                                <div class="flex flex-col flex-1 p-15 justify-between">
+                                    <div class="card-txt">
+                                        <h3 class="text-base font-bold mb-7">Chambres d'hôtes Au cœur de l'eau</h3>
+                                        <p class="text-sm">Nuit à partir de 71<span class="euro">€</span></p>
+                                    </div>
+                                    <div class="flex">
+                                        <i class="fa-xs fa-solid fa-star text-primary" aria-hidden="true"></i>
+                                        <i class="fa-xs fa-solid fa-star text-primary" aria-hidden="true"></i>
+                                        <i class="fa-xs fa-solid fa-star text-primary" aria-hidden="true"></i>
+                                        <i class="fa-xs fa-solid fa-star text-primary" aria-hidden="true"></i>
+                                        <i class="fa-xs fa-solid fa-star neutral-star" aria-hidden="true"></i>
+                                        <span class="sr-only">Note de 4 sur 5</span>
+                                    </div>
                                 </div>
                             </article>
                         </a>
-                        <a href="#" class="flex-1">
-                            <article class="card shadow bg-white rounded-20">
-                                <div class="img-container img-h-380">
-                                    <img src="./images/activites/kilyan-sockalingum.jpg" 
-                                        alt="Image du Parc National des Calanques"
-                                        class="img-full object-cover img-rounded-t">
+                        <a href="#">
+                            <article class="card shadow p-5 flex h-136 bg-white rounded-20">
+                                <div class="w-33p h-full">
+                                    <img src="./images/hebergements/febrian-zakaria2.jpg" 
+                                            alt="Image de la chambre d'hôtel"
+                                            class="img-full object-cover img-rounded-l">
                                 </div>
-                                <div class="p-20 card-txt">
-                                    <h3 class="text-base font-bold">Parc National des Calanques</h3>
-                                </div>
-                            </article>
-                        </a>
-                        <a href="#" class="flex-1">
-                            <article class="card shadow bg-white rounded-20">
-                                <div class="img-container img-h-380">
-                                    <img src="./images/activites/florian-wehde.jpg" 
-                                        alt="Image de Notre-Dame-de-la-Garde"
-                                        class="img-full object-cover img-rounded-t">
-                                </div>
-                                <div class="p-20 card-txt">
-                                    <h3 class="text-base font-bold">Notre-Dame-de-la-Garde</h3>
+                                <div class="flex flex-col flex-1 p-15 justify-between">
+                                    <div class="card-txt">
+                                        <h3 class="text-base font-bold mb-7">Hôtel Bleu et Blanc</h3>
+                                        <p class="text-sm">Nuit à partir de 68<span class="euro">€</span></p>
+                                    </div>
+                                    <div class="flex">
+                                        <i class="fa-xs fa-solid fa-star text-primary" aria-hidden="true"></i>
+                                        <i class="fa-xs fa-solid fa-star text-primary" aria-hidden="true"></i>
+                                        <i class="fa-xs fa-solid fa-star text-primary" aria-hidden="true"></i>
+                                        <i class="fa-xs fa-solid fa-star text-primary" aria-hidden="true"></i>
+                                        <i class="fa-xs fa-solid fa-star neutral-star" aria-hidden="true"></i>
+                                        <span class="sr-only">Note de 4 sur 5</span>
+                                    </div>
                                 </div>
                             </article>
                         </a>
                     </div>
                 </section>
-            </main>
+            </div>
+            <!-- Section Activités -->
+            <section id="activites" class="activites p-30">
+                <h2 class="section-title text-xl font-bold mb-30">Activités à Marseille</h2>
+                <div class="flex flex-row gap-30 activites-cards-container">
+                    <a href="#" class="flex-1">
+                        <article class="card shadow bg-white rounded-20">
+                            <div class="img-container img-h-380">
+                                <img src="./images/activites/reno-laithienne.jpg" 
+                                    alt="Image du Vieux-Port de Marseille"
+                                    class="img-full object-cover img-rounded-t">
+                            </div>
+                            <div class="p-20 card-txt">
+                                <h3 class="text-base font-bold">Vieux-Port</h3>
+                            </div>
+                        </article>
+                    </a>
+                    <a href="#" class="flex-1">
+                        <article class="card shadow bg-white rounded-20">
+                            <div class="img-container img-h-380">
+                                <img src="./images/activites/paul-hermann.jpg" 
+                                    alt="Image du Fort de Pomègues"
+                                    class="img-full object-cover img-rounded-t">
+                            </div>
+                            <div class="p-20 card-txt">
+                                <h3 class="text-base font-bold">Fort de Pomègues</h3>
+                            </div>
+                        </article>
+                    </a>
+                    <a href="#" class="flex-1">
+                        <article class="card shadow bg-white rounded-20">
+                            <div class="img-container img-h-380">
+                                <img src="./images/activites/kilyan-sockalingum.jpg" 
+                                    alt="Image du Parc National des Calanques"
+                                    class="img-full object-cover img-rounded-t">
+                            </div>
+                            <div class="p-20 card-txt">
+                                <h3 class="text-base font-bold">Parc National des Calanques</h3>
+                            </div>
+                        </article>
+                    </a>
+                    <a href="#" class="flex-1">
+                        <article class="card shadow bg-white rounded-20">
+                            <div class="img-container img-h-380">
+                                <img src="./images/activites/florian-wehde.jpg" 
+                                    alt="Image de Notre-Dame-de-la-Garde"
+                                    class="img-full object-cover img-rounded-t">
+                            </div>
+                            <div class="p-20 card-txt">
+                                <h3 class="text-base font-bold">Notre-Dame-de-la-Garde</h3>
+                            </div>
+                        </article>
+                    </a>
+                </div>
+            </section>
+        </main>
             <!-- Footer -->
             <footer class="bg-main">
-                <div class="container flex gap-15 p-20">
+                <div class="container flex gap-15 p-20 footer-container">
                     <div class="flex-1">
                         <h3 class="text-lg font-bold mb-15">À propos</h3>
                         <ul class="flex flex-col gap-15">
