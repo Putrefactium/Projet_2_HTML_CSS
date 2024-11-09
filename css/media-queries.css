@@ -207,6 +207,7 @@
     .hebergements-cards {
         flex-direction: column;
         gap: 15px;
+        height: auto;
     }
 
     #hebergements-cards-container {
@@ -221,9 +222,20 @@
         padding-right: 20px;
         flex: auto;
     }
+
+    .hebergements a {
+        width: 100%;
+        height: auto;
+    }
+
+    .hebergements .img-container {
+        height: 124px; /* Maintient une hauteur fixe pour l'image */
+    }
+    
     .hebergements .card {
         width: 100%;
         box-sizing: border-box;
+        height: auto;
     }
 
     .activites-cards-container {
