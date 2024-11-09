@@ -211,15 +211,19 @@
 
     #hebergements-cards-container {
         padding-top: 15px;
+        width: 100%;
     }
 
     .hebergements {
         border-radius: 0;
         background-color: white;
-        padding: 20px;
+        padding-left: 20px;
+        padding-right: 20px;
+        flex: auto;
     }
     .hebergements .card {
         width: 100%;
+        box-sizing: border-box;
     }
 
     .activites-cards-container {
