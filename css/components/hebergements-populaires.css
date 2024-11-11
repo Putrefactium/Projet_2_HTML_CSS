@@ -1,14 +1,5 @@
 /* Hebergements & Populaires */
 
-.hebergements .card {
-    height: 187px; /* 207px de la maquette - 20px de padding */
-}
-
-.populaires .card {
-    height: 144px;
-    box-sizing: border-box;
-}
-
 /* Étoiles */
 .neutral-star {
     color: var(--main-bg-color);

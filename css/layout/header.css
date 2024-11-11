@@ -1,15 +1,4 @@
-/****** Composants Spécifiques ***********/
-
 /* Navigation */
-.nav-item {
-    position: relative;
-    height: 35px;
-}
-
-.nav-item a {
-    text-decoration: none;
-    color: inherit;
-}
 
 .nav-item:hover {
     color: var(--main-color);
